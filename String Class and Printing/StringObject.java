@@ -89,5 +89,9 @@ public class StringObject {
         // Value of Method
         System.out.println(String.valueOf(179));
 
+        // Contains Method
+        String greatWallOfChina = "The Great Wall of China";
+        System.out.printf("greatWallOfChina Contains \"china\" ? : %b\n", greatWallOfChina.contains("china"));
+
     }
 }
