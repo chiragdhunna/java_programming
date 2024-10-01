@@ -6,7 +6,7 @@
  * 2. Find username and domain name from the mail
  */
 
-public class StudentChallenge1 {
+public class MailChallenge1 {
     public static void main(String[] args) {
         String mail = "chiragdhunna2468@gmail.com";
         System.out.println("Does it contain gmail? : " + mail.contains("gmail"));

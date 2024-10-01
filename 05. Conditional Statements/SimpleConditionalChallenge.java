@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 
-public class StudentChallenge1 {
+public class SimpleConditionalChallenge {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Please enter the number : ");

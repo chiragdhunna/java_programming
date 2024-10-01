@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class StudentChallenge2 {
+public class RadixChallenge {
     public static void main(String[] args) {
         System.out.print("Enter the number : ");
         Scanner scan = new Scanner(System.in);

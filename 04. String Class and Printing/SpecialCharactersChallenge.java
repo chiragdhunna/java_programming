@@ -5,7 +5,7 @@
  * 
  */
 
-public class StudentChallenge3 {
+public class SpecialCharactersChallenge {
     public static void main(String[] args) {
         String str = "a!B@C#1#2%3";
         System.out.println(str.replaceAll("[^a-zA-Z0-9]", ""));

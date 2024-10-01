@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class StudentChallenge5 {
+public class MenuDrivenArithematicChallenge {
     public static void main(String[] args) {
         System.out.println("Menu");
         System.out.println("1. ADD");

@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class StudentChallenge3 {
+public class TypeOfWebsiteChallege {
     public static void main(String[] args) {
         System.out.print("Enter the day number : ");
         Scanner scan = new Scanner(System.in);

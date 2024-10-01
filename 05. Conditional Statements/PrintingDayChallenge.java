@@ -6,7 +6,7 @@
 
  import java.util.Scanner;
 
-public class StudentChallenge4 {
+public class PrintingDayChallenge {
     public static void main(String[] args) {
         System.out.print("Enter the day number : " );
         Scanner scan = new Scanner(System.in);

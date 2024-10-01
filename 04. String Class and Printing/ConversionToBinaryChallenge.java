@@ -5,7 +5,7 @@
  * 
  */
 
-public class StudentChallenge2 {
+public class ConversionToBinaryChallenge {
     public static void main(String[] args) {
         int binaryNumber = 10110001;
         String binaryConverted = String.valueOf(binaryNumber);
