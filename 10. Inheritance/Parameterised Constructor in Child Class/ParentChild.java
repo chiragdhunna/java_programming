@@ -34,5 +34,6 @@ class Child extends Parent {
 public class ParentChild {
     public static void main(String[] args) {
         Child child = new Child(2, 3, 4);
+        System.out.println(child);
     }
 }
