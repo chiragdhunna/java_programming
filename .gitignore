@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 
 *.vscode
+/16. Exception Handling/trycatch/target/
+/16. Exception Handling/trycatch/nbproject/private/
+/16. Exception Handling/trycatch/build/
