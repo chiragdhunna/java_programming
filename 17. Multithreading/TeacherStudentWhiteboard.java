@@ -45,7 +45,7 @@ class WhiteBoard {
     synchronized  public void write(String msg){
         System.out.println("Teahcer is writing " + msg);
         while(counter!=0)
-            try{wait();}catch(Exception e){}
+            try{wait();}catch(InterruptedException e){}
         
         text = msg;
         counter = numberOfStudents;
@@ -55,7 +55,7 @@ class WhiteBoard {
     synchronized public String read(){
 
         while(counter==0)
-            try{wait();}catch(Exception e){}
+            try{wait();}catch(InterruptedException e){}
 
         counter--;
         if(counter==0)
