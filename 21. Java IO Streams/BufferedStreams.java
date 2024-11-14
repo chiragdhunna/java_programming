@@ -1,7 +1,6 @@
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Collections;
 
 public class BufferedStreams {
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class BufferedStreams {
             System.out.print((char) bufferedInputStream.read());
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }

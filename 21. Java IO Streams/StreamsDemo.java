@@ -13,7 +13,6 @@ public class StreamsDemo {
             fileOutputStream.write(data.getBytes());
             fileOutputStream.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
@@ -33,7 +32,6 @@ public class StreamsDemo {
             } while (byteData != -1);
             fileInputStream.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println();
@@ -48,7 +46,6 @@ public class StreamsDemo {
             } while (byteData != -1);
             fileInputStream.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

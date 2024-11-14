@@ -17,7 +17,6 @@ public class CopyAFile {
         // fileInputStream.close();
         // fileOutputStream.close();
         // } catch (IOException e) {
-        // // TODO Auto-generated catch block
         // e.printStackTrace();
         // }
 
@@ -39,7 +38,6 @@ public class CopyAFile {
             sequenceInputStream.close();
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

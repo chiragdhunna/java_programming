@@ -1,4 +1,5 @@
 package customLogger;
+
 import java.util.logging.*;
 
 class CustomFormatter extends Formatter {
@@ -26,7 +27,11 @@ class CustomFormatter extends Formatter {
                 levelColor = GREY;
                 break;
             case "FINE":
+                levelColor = RED;
+                break;
             case "FINER":
+                levelColor = RED;
+                break;
             case "FINEST":
                 levelColor = GREY;
                 break;
@@ -52,13 +57,13 @@ class CustomFormatter extends Formatter {
 
         // Format the log message with color
         return String.format(
-            levelColor + "%1$tF %1$tT - %2$s - %3$s - %4$s (%5$s:%6$d)" + RESET + "\n",
-            new java.util.Date(record.getMillis()),            // Timestamp
-            record.getLoggerName(),                            // Logger name
-            record.getLevel().getName(),                       // Log level
-            formatMessage(record),                             // Log message
-            record.getSourceClassName(),                       // Class name
-            lineNumber                                         // Captured line number
+                levelColor + "%1$tF %1$tT - %2$s - %3$s - %4$s (%5$s:%6$d)" + RESET + "\n",
+                new java.util.Date(record.getMillis()), // Timestamp
+                record.getLoggerName(), // Logger name
+                record.getLevel().getName(), // Log level
+                formatMessage(record), // Log message
+                record.getSourceClassName(), // Class name
+                lineNumber // Captured line number
         );
     }
 }
@@ -67,7 +72,7 @@ public class CustomLogger {
 
     private static final Logger logger = Logger.getLogger("MyApp");
 
-    public CustomLogger(){
+    public CustomLogger() {
         // Set logger level
         logger.setLevel(Level.ALL);
 
@@ -83,27 +88,27 @@ public class CustomLogger {
         logger.addHandler(consoleHandler);
     }
 
-    public void finest(String message){
-        logger.finest(message);     // FINEST (Grey)
-    }
-    
-    public void finer(String message){
-        logger.finer(message);       // FINER (Grey)
+    public void finest(String message) {
+        logger.finest(message); // FINEST (Grey)
     }
 
-    public void fine(String message){
-        logger.fine(message);         // FINE (Grey)
+    public void finer(String message) {
+        logger.finer(message); // FINER (Grey)
     }
 
-    public void info(String message){
-        logger.info(message);         // INFO (Grey)
+    public void fine(String message) {
+        logger.fine(message); // FINE (Grey)
     }
 
-    public void warning(String message){
-        logger.warning(message);   // WARNING (Yellow)
+    public void info(String message) {
+        logger.info(message); // INFO (Grey)
     }
 
-    public void severe(String message){
-        logger.severe(message);     // SEVERE (Bold Red)
+    public void warning(String message) {
+        logger.warning(message); // WARNING (Yellow)
+    }
+
+    public void severe(String message) {
+        logger.severe(message); // SEVERE (Bold Red)
     }
 }
