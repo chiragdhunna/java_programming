@@ -1,13 +1,13 @@
-class Rectangle {
+class Rectangle1 {
     public double length;
     public double breadth;
 
-    Rectangle() {
+    Rectangle1() {
         length = 10;
         breadth = 20;
     }
 
-    Rectangle(double length, double breadth) {
+    Rectangle1(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -28,7 +28,7 @@ class Rectangle {
 public class RectangleMain {
     public static void main(String[] args) {
 
-        Rectangle rectangle = new Rectangle();
+        Rectangle1 rectangle = new Rectangle1();
         System.out.println("rectangle is : " + rectangle.isSquare());
     }
 }
