@@ -1,16 +1,15 @@
 
-interface MyLambda{
+interface MyLambdaLD {
     public void display();
 }
 
 public class LamdaDemo {
     public static void main(String[] args) {
-        MyLambda m = () -> {
+        MyLambdaLD m = () -> {
             System.out.println("Hello World");
         };
 
         m.display();
-    }  
+    }
 
 }
-

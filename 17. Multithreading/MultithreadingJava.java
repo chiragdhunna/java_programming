@@ -1,38 +1,38 @@
 
 import java.time.Duration;
 
-class MyRunnable implements  Runnable{
+class MyRunnable implements Runnable {
     @Override
     public void run() {
         try {
-         int i = 0;
-        while(true){
-            System.out.println("Thread2 : " + i);
-            i++;
-            Thread.sleep(Duration.ofSeconds(1));
-        }   
+            int i = 0;
+            while (true) {
+                System.out.println("Thread2 : " + i);
+                i++;
+                Thread.sleep(Duration.ofSeconds(1).toMillis());
+            }
         } catch (InterruptedException e) {
             System.out.println("Exception in Thread1");
         }
-        
+
     }
 }
 
-class MyThread extends Thread{
+class MyThread extends Thread {
 
     @Override
     public void run() {
         try {
-         int i = 0;
-        while(true){
-            System.out.println("Thread1 : " + i);
-            i++;
-            Thread.sleep(Duration.ofSeconds(1));
-        }   
+            int i = 0;
+            while (true) {
+                System.out.println("Thread1 : " + i);
+                i++;
+                Thread.sleep(Duration.ofSeconds(1).toMillis());
+            }
         } catch (InterruptedException e) {
             System.out.println("Exception in Thread1");
         }
-        
+
     }
 }
 
@@ -44,10 +44,10 @@ public class MultithreadingJava {
         Thread thread2 = new Thread(mr);
         thread2.start();
         int i = 0;
-        while(true){
+        while (true) {
             System.out.println("Thread3 : " + i);
-            Thread.sleep(Duration.ofSeconds(1));
+            Thread.sleep(Duration.ofSeconds(1).toMillis());
             i++;
-        } 
+        }
     }
 }

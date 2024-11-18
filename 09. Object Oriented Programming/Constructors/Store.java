@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Product {
     private int itemNumber;
     private String name;
@@ -44,20 +47,20 @@ class Product {
 
 }
 
-class Customer {
+class CustomerSP {
     private int customerId;
     private String name;
     private String address;
     private String phoneNumber;
 
-    Customer() {
+    CustomerSP() {
         this.customerId = 0000;
         this.name = "";
         this.address = "";
-        this.phoneNumber = 000000000;
+        this.phoneNumber = "000000000";
     }
 
-    Customer(int customerId, String name, String address, String phoneNumber) {
+    CustomerSP(int customerId, String name, String address, String phoneNumber) {
         this.customerId = customerId;
         this.name = name;
         this.address = address;
@@ -68,7 +71,7 @@ class Customer {
         return address;
     }
 
-    public int getCustomerId() {
+    public int getCustomerSId() {
         return customerId;
     }
 
@@ -91,13 +94,18 @@ class Customer {
 
 public class Store {
     public static void main(String[] args) {
-        Customer customer = new Customer(01001, "Chirag", "India", "9353348691");
-        Product product1 = new Product(0, "XBOX", 100, 10);
-        Product product2 = new Product(1, "PS5", 500, 13);
-        Product product3 = new Product(2, "PC", 200, 50);
-        Product product4 = new Product(3, "Console", 50, 69);
-        Product product5 = new Product(4, "Keyboard", 130, 1244);
-        Product product6 = new Product(5, "Drone", 980, 68);
+        CustomerSP customer = new CustomerSP(01001, "Chirag", "India", "9353348691");
+        List<Product> productList = new ArrayList<>();
+        productList.add(new Product(0, "XBOX", 100, 10));
+        productList.add(new Product(1, "PS5", 500, 13));
+        productList.add(new Product(2, "PC", 200, 50));
+        productList.add(new Product(3, "Console", 50, 69));
+        productList.add(new Product(4, "Keyboard", 130, 1244));
+        productList.add(new Product(5, "Drone", 980, 68));
 
+        for (Product product : productList) {
+            System.out.println(product.toString());
+        }
+        System.out.println(customer.toString());
     }
 }

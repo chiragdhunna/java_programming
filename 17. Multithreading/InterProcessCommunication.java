@@ -1,19 +1,25 @@
-class MyData{
+class MyData {
     int value;
     boolean flag = true;
 
-    synchronized  public void setValue(int value){
-        while(flag!=true)
-            try{wait();}catch(Exception e){}
+    synchronized public void setValue(int value) {
+        while (flag != true)
+            try {
+                wait();
+            } catch (Exception e) {
+            }
 
         this.value = value;
-        flag =false;
+        flag = false;
         notify();
     }
 
-    synchronized public int getValue(){
-        while(flag!=false)
-            try{wait();}catch(Exception e){}
+    synchronized public int getValue() {
+        while (flag != false)
+            try {
+                wait();
+            } catch (Exception e) {
+            }
 
         flag = true;
         notify();
@@ -21,36 +27,36 @@ class MyData{
     }
 }
 
-class Producer extends Thread{
+class ProducerIP extends Thread {
     MyData data;
 
-    public Producer(MyData data) {
+    public ProducerIP(MyData data) {
         this.data = data;
     }
 
     @Override
-    public void run(){
+    public void run() {
         int counter = 0;
-        while(true){
+        while (true) {
             data.setValue(counter);
-            System.out.println("Producer : " + counter);
+            System.out.println("ProducerIP : " + counter);
             counter++;
             // try{Thread.sleep(1000);}catch(Exception e){}
         }
     }
 }
 
-class Consumer extends Thread{
+class CustomerIP extends Thread {
     MyData data;
 
-    public Consumer(MyData data) {
+    public CustomerIP(MyData data) {
         this.data = data;
     }
 
     @Override
-    public void run(){
-        while(true){
-            System.out.println("Consumer : " + data.getValue());
+    public void run() {
+        while (true) {
+            System.out.println("CustomerIP : " + data.getValue());
             // try{Thread.sleep(1000);}catch(Exception e){}
         }
     }
@@ -59,8 +65,8 @@ class Consumer extends Thread{
 public class InterProcessCommunication {
     public static void main(String[] args) {
         MyData data = new MyData();
-        Producer producer = new Producer(data);
-        Consumer consumer = new Consumer(data);
+        ProducerIP producer = new ProducerIP(data);
+        CustomerIP consumer = new CustomerIP(data);
         producer.start();
         consumer.start();
     }
