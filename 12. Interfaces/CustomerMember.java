@@ -2,7 +2,7 @@ interface Member {
     void callBack();
 }
 
-class Store {
+class StoreCM {
     Member member[] = new Member[100];
     int count = 0;
 
@@ -32,7 +32,7 @@ class CustomerCM implements Member {
 
 public class CustomerMember {
     public static void main(String[] args) {
-        Store store = new Store();
+        StoreCM store = new StoreCM();
         CustomerCM noraFatehi = new CustomerCM("Nora Fatehi");
         CustomerCM miaMalkova = new CustomerCM("Mia Malkova");
         CustomerCM annJoy = new CustomerCM("Ann Joy");
