@@ -21,6 +21,14 @@ class CoffeeMachine {
         sugarQty = qty;
     }
 
+    public void fillMilk(float qty) {
+        milkQty = qty;
+    }
+    
+    public void fillCoffee(float qty) {
+        coffeeQty = qty;
+    }
+
     public float getCoffee() {
         return 0.23f;
     }
