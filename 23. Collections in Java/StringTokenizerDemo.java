@@ -1,11 +1,9 @@
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class StringTokenizerDemo {
     public static void main(String[] args) throws Exception {
-        // Tokenising a String
+        try ( // Tokenising a String
         /*
          * String data = "name=Vijay;address=delhi;country=india;dept=cse";
          * 
@@ -15,7 +13,6 @@ public class StringTokenizerDemo {
          * System.out.println(stk.nextToken());
          * }
          */
-
         // Tokenising from a File
         /*
          * FileInputStream fis = new FileInputStream(
@@ -29,21 +26,21 @@ public class StringTokenizerDemo {
          * System.out.println(stk.nextToken());
          * }
          */
-
         // Tokenising from a File with numbers in a list of number
-        FileInputStream fis = new FileInputStream(
-                "/Users/chiragdhunna/Desktop/Docs/java_programming/23. Collections in Java/StringTokenizerNumbersDemo.txt");
-        byte[] data = new byte[fis.available()];
-        fis.read(data);
-        String str = new String(data);
-        StringTokenizer stk = new StringTokenizer(str, ",");
-        ArrayList<Integer> arr = new ArrayList<>();
-        while (stk.hasMoreTokens()) {
-            arr.add(Integer.parseInt(stk.nextToken()));
-        }
-
-        for (int x : arr) {
-            System.out.println(x);
+                FileInputStream fis = new FileInputStream(
+                        "/Users/chiragdhunna/Desktop/Docs/java_programming/23. Collections in Java/StringTokenizerNumbersDemo.txt")) {
+            byte[] data = new byte[fis.available()];
+            fis.read(data);
+            String str = new String(data);
+            StringTokenizer stk = new StringTokenizer(str, ",");
+            ArrayList<Integer> arr = new ArrayList<>();
+            while (stk.hasMoreTokens()) {
+                arr.add(Integer.valueOf(stk.nextToken()));
+            }
+            
+            for (int x : arr) {
+                System.out.println(x);
+            }
         }
 
     }
