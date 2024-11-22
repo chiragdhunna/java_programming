@@ -27,3 +27,12 @@ replay_pid*
 /16. Exception Handling/trycatch/target/
 /16. Exception Handling/trycatch/nbproject/private/
 /16. Exception Handling/trycatch/build/
+/25. Networking/ReverseEcho/nbproject/private/
+/25. Networking/ReverseEcho/build/
+/25. Networking/ReverseEcho/dist/
+/25. Networking/MultiThreadedReverseEchoServcer/nbproject/private/
+/25. Networking/MultiThreadedReverseEchoServcer/dist/
+/25. Networking/MultiThreadedReverseEchoServcer/build/
+/25. Networking/DatagramClient/nbproject/private/
+/25. Networking/DatagramClient/build/
+/25. Networking/DatagramClient/dist/
